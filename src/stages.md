@@ -1,5 +1,7 @@
 # Implementation stages
 
+The implementation sequence is going to be the following:
+
 1. Native light client console application with minimal JSON RPC functionality
     1. Add support of Conan package manager to [scale-code-cpp](https://github.com/soramitsu/scale-codec-cpp)
     2. Add support of Conan package manager to [cpp-libp2p](https://github.com/libp2p/cpp-libp2p)

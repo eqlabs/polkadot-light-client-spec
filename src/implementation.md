@@ -13,7 +13,7 @@ To support the light client functionality we will implement the support of the f
 - /dot/sync/warp
 - /dot/block-announces/1
 - /dot/sync/1
-- /dot/light/2 
+- /dot/light/2
 
 We will use hash_map with serialization/deserialization to hold the blockchain state.
 
