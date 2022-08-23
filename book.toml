@@ -1,0 +1,6 @@
+[book]
+authors = ["Vaclav Barta"]
+language = "en"
+multilingual = false
+src = "src"
+title = "C++ Light Client implementation spec"
