@@ -1,6 +1,6 @@
 # Summary
 
-- [Goal](./goal.md)
+- [Project goal](./goal.md)
 - [Architecture & artifacts](./architecture.md)
 - [Functionality](./functionality.md)
 - [Implementation](./implementation.md)
