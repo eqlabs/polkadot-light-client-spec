@@ -6,4 +6,6 @@ Light client should support the following functionality:
 - Retrieving checkpoint state from a trusted source to speed up initialization
 - Subscribe/unsubscribe to/from parachains
 - Send a new transaction and subscribe to it’s updates
-- Subset of [RPC methods](https://docs.5ire.org/docs/substrate/rpc/). The minimum subset would include *childstate_GetStorage*, *state_getStorage* and *state_getReadProof*. This subset should be carefully defined along with which methods can and should do the validation on a light client side and which will proxy it to a full node.
+- Subset of [RPC methods](https://docs.5ire.org/docs/substrate/rpc/). The minimum subset would include *childstate_GetStorage*, *state_getStorage* and *state_getReadProof*. This subset should be carefully defined along with which methods can and should do the validation on a light client side and which will proxy it to a full node. [^1]
+
+[^1] Web3 Foundation input required, which API methods to be implemented within the scope
