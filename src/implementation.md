@@ -17,4 +17,4 @@ To support the light client functionality we will implement the support of the f
 
 We will use hash_map with serialization/deserialization to hold the blockchain state.
 
-We will use openssl for cryptography functions, and port the needed algorithms not included in openssl (e.g. Schnorr signatures).
+We will use openssl for cryptography functions (e.g. Blake2), and port the needed algorithms not included in openssl (e.g. Schnorr signatures).
