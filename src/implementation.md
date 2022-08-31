@@ -1,5 +1,48 @@
 # Implementation
 
+```mermaid
+flowchart TB
+  subgraph PSC["Platform Specific Code"]
+  end
+
+  subgraph LC["Light Client"]
+    direction TB
+    subgraph BAL["main event loop"]
+        direction RL
+        boost::asio --> boost::asio
+    end
+    subgraph Networking
+        cpp-libp2p <--> scale-code-cpp
+
+        scale-code-cpp <--> /dot/sync/warp
+        scale-code-cpp <--> /dot/block-announces/1
+        scale-code-cpp <--> /dot/sync/1
+        scale-code-cpp <--> /dot/light/2
+    end
+    subgraph BS["Blockchain State"]
+    end
+    subgraph Crypto
+      subgraph openssl
+      end
+      subgraph Ported["Schorr signatures (ported)"]
+      end
+    end
+    Networking <--> BS
+    BS --> Crypto
+    Networking <--> Crypto
+  end
+  subgraph CT["Compilation Targets"]
+    direction TB
+    subgraph WASM["WASM (via emscripten)"]
+    end
+    subgraph NativeDesktop["Native (Desktop)"]
+    end
+    subgraph NativeMobile["Native (Mobile)"]
+    end
+  end
+  PSC <--> LC --> CT
+```
+    
 Implementation will use a single boost::asio-loop based approach without extra threads. All platform-specific code will be abstracted out. That would allow us to compile the same C++ code to a WASM module.
 
 Emscripten will be used to compile C++ code into WASM module.
