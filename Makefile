@@ -6,5 +6,5 @@ install:
 	cargo install mdbook-mermaid
 	mdbook-mermaid install .
 
-clean: 
+clean:
 	mdbook clean

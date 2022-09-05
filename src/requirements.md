@@ -6,7 +6,7 @@ Note: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “
 
 - The light client (hereafter _the client_) MUST be written in C++
 
-- The client must be compatible with the full node of any Substrate chain, i.e. Polkadot, Kusama, or any number of stand-alone Substrate chains and Parachains.
+- The client MUST be compatible with any full nodes of any Substrate chain that are [spec](https://spec.polkadot.network/)-conformant.
 
 ## User Experience
 
@@ -14,10 +14,11 @@ Note: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “
   - The client library SHOULD be architected as to eliminate coupling altogether.
 
 - The client MUST support multiple platforms to improve the security of wallets on mobile devices/web/desktop.
-  - The client MUST support the linux command line
-  - The client library MUST be usable in mobile devices
+  - The client MUST be a command-line application with a support of linux target
+    - TODO: Mac? Windows?
+  - The client library MUST be usable on popular mobile platforms (iOS, Android)
   - The client library MUST be usable in browsers as a WebAssembly module, with a JS wrapper (hereafter _WASM Module_).
-  - The client library MUST support the linux desktop
+  - The client library MUST support linux target
     - TODO: Mac? Windows?
 
 - The client MUST be sufficiently documented.
@@ -38,7 +39,7 @@ Note: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “
 - The client MUST be able to send a new transaction.
 - The client MUST be able subscribe a new transaction's updates.
 - The client MUST support the following minimum subset of [RPC methods](https://docs.5ire.org/docs/substrate/rpc/):
-  - `childstate_GetStorage`, `state_getStorage` and `state_getReadProof`. 
+  - `childstate_GetStorage`, `state_getStorage` and `state_getReadProof`.
   - TODO: This subset should be carefully defined along with which methods can and should do the validation on a light client side and which will proxy it to a full node. Web3 Foundation input required, which API methods to be implemented within the scope
 
 [^1]: This could be discussed in future grant proposals.
