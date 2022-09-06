@@ -3,7 +3,7 @@ authors = ["Vaclav Barta"]
 language = "en"
 multilingual = false
 src = "src"
-title = "XXXXX: A C++ Substrate Light Client"
+title = "Motif: A C++ Substrate Light Client"
 
 [preprocessor]
 
