@@ -1,7 +1,6 @@
 # Summary
 
 - [Project goal](./goal.md)
-- [Architecture & artifacts](./architecture.md)
-- [Functionality](./functionality.md)
+- [Requirements](./requirements.md)
 - [Implementation](./implementation.md)
 - [Implementation stages](./stages.md)

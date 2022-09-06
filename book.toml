@@ -3,4 +3,14 @@ authors = ["Vaclav Barta"]
 language = "en"
 multilingual = false
 src = "src"
-title = "C++ Light Client implementation spec"
+title = "Motif: A C++ Substrate Light Client"
+
+[preprocessor]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[output]
+
+[output.html]
+additional-js = ["mermaid.min.js", "mermaid-init.js"]
