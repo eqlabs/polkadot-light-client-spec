@@ -14,12 +14,10 @@ Note: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “
   - The client library SHOULD be architected as to eliminate coupling altogether.
 
 - The client MUST support multiple platforms to improve the security of wallets on mobile devices/web/desktop.
-  - The client MUST be a command-line application with a support of linux target
-    - TODO: Mac? Windows?
+  - The client MUST be a command-line application with a support of linux target. The client MUST be implemented in a cross-platform way and SHOULD compile against Mac OS and Windows platforms. But full Windows and Mac OS support is out of the scope and can be added within further development.
   - The client library MUST be usable on popular mobile platforms (iOS, Android)
   - The client library MUST be usable in browsers as a WebAssembly module, with a JS wrapper (hereafter _WASM Module_).
-  - The client library MUST support linux target
-    - TODO: Mac? Windows?
+  - The client library MUST support linux target. It SHOULD be implemented in a cross-platform way, but full support of other platforms (e.g. Windows, Mac OS, Android) is out of the scope.
 
 - The client MUST be sufficiently documented.
   - The client MUST contain standalone documentation for users
@@ -38,8 +36,7 @@ Note: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “
 - The client MUST be able to subscribe/unsubscribe to/from parachains.
 - The client MUST be able to send a new transaction.
 - The client MUST be able subscribe a new transaction's updates.
-- The client MUST support the following minimum subset of [RPC methods](https://docs.5ire.org/docs/substrate/rpc/):
-  - `childstate_GetStorage`, `state_getStorage` and `state_getReadProof`.
-  - TODO: This subset should be carefully defined along with which methods can and should do the validation on a light client side and which will proxy it to a full node. Web3 Foundation input required, which API methods to be implemented within the scope
+- The client MUST support the following minimum subset of [RPC methods](https://paritytech.github.io/json-rpc-interface-spec/):
+  - `rpc_methods`, `chainHead_unstable_follow`, `chainHead_unstable_unfollow`, `chainHead_unstable_unpin`, `chainHead_unstable_storage`, `chainHead_unstable_call` and `chainHead_unstable_stopCall`.
 
 [^1]: This could be discussed in future grant proposals.

@@ -6,7 +6,7 @@ The implementation sequence is going to be the following:
     1. Add support of Conan package manager to [scale-code-cpp](https://github.com/soramitsu/scale-codec-cpp)
     2. Add support of Conan package manager to [cpp-libp2p](https://github.com/libp2p/cpp-libp2p)
     3. Create light client application with transaction management functionality.
-    4. Add support of *GetStorage* and *GetStorageProof* JSON RPC methods
+    4. Add support of `chainHead_unstable_follow`, `chainHead_unstable_unfollow` and `chainHead_unstable_unpin` JSON RPC methods
     5. Document code & API
 2. C++ library with light client functionality
     1. Prepare separate C++ library artifact (include + methods)
