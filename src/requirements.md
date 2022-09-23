@@ -17,7 +17,7 @@ Note: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “
   - The client MUST be a command-line application with a support of linux target. The client MUST be implemented in a cross-platform way and SHOULD compile against Mac OS and Windows platforms. But full Windows and Mac OS support is out of the scope and can be added within further development.
   - The client library MUST be usable on popular mobile platforms (iOS, Android)
   - The client library MUST be usable in browsers as a WebAssembly module, with a JS wrapper (hereafter _WASM Module_).
-  - The client library MUST support linux target. It MUST be implemented in a cross-platform way, but full support of other platforms (e.g. Windows, Mac OS, Android) is out of the scope.
+  - The client library MUST support linux target. It SHOULD be implemented in a cross-platform way, but full support of other platforms (e.g. Windows, Mac OS, Android) is out of the scope.
 
 - The client MUST be sufficiently documented.
   - The client MUST contain standalone documentation for users
