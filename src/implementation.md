@@ -87,9 +87,9 @@ To support the light client functionality we will implement the support of the f
 
 The following methods will be implemented: `rpc_methods`, `chainHead_unstable_follow`, `chainHead_unstable_unfollow`, `chainHead_unstable_unpin`, `chainHead_unstable_storage`, `chainHead_unstable_call` and `chainHead_unstable_stopCall`. All of `chainHead` methods allow tracking of the chain and their storage. The most important ones that will be implemented at the first stage are:
 - `chainHead_unstable_follow` which is the first method that should be called by the client. It returns the current list of blocks that are near the head of the chain and generates notifications about new blocks. 
-- `chainHead_unstable_unpin` method should be called whenever a `{"event": "finalized"}` notification is received for a given subscriber
+- `chainHead_unstable_unpin` method which should be called whenever a `{"event": "finalized"}` notification is received for a given subscriber
 - `chainHead_unstable_follow` - stops a subscription started with `chainHead_unstable_follow`
-The other chosen methods allow will client to get more informations about blocks in the chain.
+The other chosen methods will allow client to get more informations about blocks in the chain.
 
 ## Storage
 
