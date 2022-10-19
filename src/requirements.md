@@ -23,6 +23,14 @@ Note: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “
   - The client MUST contain standalone documentation for users
   - The client library code SHOULD contain inline documentation for current and future developers
 
+## The runtime environment
+- The runtime environment MUST be a cross-platform and MUST support compilation to WebAssembly itself.
+
+- The runtime environment SHOULD have the ability to compile and interpret WebAssembly. Light client may not execude methods on a single runtime often, therefore interpreting may be faster for a single call.
+
+- The runtime environment MUST be written in C++ as is _the client_.
+
+
 ## The WASM Module
 
 - The WebAssembly Module + JS wrapper SHOULD call RPC methods via API (modelled after ScProvider of [substrate-connect](https://substrate.io/developers/substrate-connect/)), not via RPC server.
