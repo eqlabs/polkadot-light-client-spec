@@ -91,4 +91,10 @@ As local storage in a browser is severely limited (5-10 MB), we cannot have pers
 
 ## Crypto Libraries
 
-We will use openssl for cryptography functions (e.g. Blake2), and port the needed algorithms not included in openssl (e.g. Schnorr signatures).
+We will use openssl for cryptographic functions.  Openssl supports Blake2, a highly optimized SHA-3 algorithm, which we plan on using.  As for the algorithms missing from openssl, they will be ported (e.g. Schnorr signatures).
+
+There do exist alternatives to openssl, but they are not as complete; going in that direction would increase the number of third-party dependencies.  Boost already uses openssl for its networking (TLS connections), and cpp-libp2p links in both libcrypto and libssl.
+
+The library is highly tested and optimized.  Since we will be linking with static libraries, the space requirements will remain minimal.
+
+As the project develops we will periodically profile the cryptographic code, and may make changes if necessary.
