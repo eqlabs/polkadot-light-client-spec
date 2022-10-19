@@ -55,7 +55,7 @@ Implementation will use a single `boost::asio`-loop based approach without extra
 All platform-specific code will be abstracted out. That would allow us to compile the same C++ code both to native binaries and to a WASM module.
 
 We will use [binaryen](https://github.com/WebAssembly/binaryen) with Emscripten to create the WASM module. Binaryen is a compiler and toolchain infrastructure library for WebAssembly written in C++. Reasons behind this choice:
-- binaryen if fast and effective, it is optimized to use all available CPU cores, it also compiles to WebAssembly quickly,
+- binaryen is fast and effective, it is optimized to use all available CPU cores, it also compiles to WebAssembly quickly,
 - it contains many optimizations that improve code size and speed,
 - binaryen is already used by other Polkadot related projects (e.g. Kagome) so it is a tested solution.
 
