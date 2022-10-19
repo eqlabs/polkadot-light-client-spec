@@ -57,7 +57,9 @@ All platform-specific code will be abstracted out. That would allow us to compil
 Emscripten will be used to compile C++ code into WASM module.
 
 We will use [binaryen](https://github.com/WebAssembly/binaryen) to run WebAssembly inside _the client_. Binaryen is a compiler and toolchain infrastructure library for WebAssembly written in C++. Reasons behind this choice:
-- binaryen is fast and effective, it is optimized to use all available CPU cores, it also compiles to WebAssembly quickly,
+- binaryen is cross-platform and supports compilation to WebAssembly itself,
+- it has the ability to compile and interpret WebAssembly. Light client may not execute methods on a single runtime often, therefore interpreting option may be faster for a single method call,
+- it is fast and effective, it is optimized to use all available CPU cores, it also compiles to WebAssembly quickly,
 - it contains many optimizations that improve code size and speed,
 - binaryen is already used by other projects (e.g. Emscripten, Kagome) so it is a tested solution.
 
