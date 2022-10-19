@@ -26,7 +26,7 @@ Note: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “
 ## The runtime environment
 - The runtime environment MUST be a cross-platform and MUST support compilation to WebAssembly itself.
 
-- The runtime environment SHOULD have the ability to compile and interpret WebAssembly. Light client may not execude methods on a single runtime often, therefore interpreting may be faster for a single call.
+- The runtime environment SHOULD have the ability to compile and interpret WebAssembly. Light client may not execute methods on a single runtime often, therefore interpreting option may be faster for a single method call.
 
 - The runtime environment MUST be written in C++ as is _the client_.
 
