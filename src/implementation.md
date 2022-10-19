@@ -43,9 +43,10 @@ flowchart TB
   PSC <--> LC --> CT
 ```
 
-Implementation will use a single boost::asio-loop based approach without extra threads. All platform-specific code will be abstracted out. That would allow us to compile the same C++ code both to native binaries and to a WASM module.
+Implementation will use a single boost::asio-loop based approach without extra threads. All platform-specific code will be abstracted out. That would allow us to compile the same C++ code both to native 
+binaries and to a WASM module.
 
-Emscripten will be used to compile C++ code into WASM module.
+We will use [binaryen](https://github.com/WebAssembly/binaryen) with Emscripten to create the WASM module. Binaryen is a compiler and toolchain infrastructure library for WebAssembly written in C++. 
 
 [scale-code-cpp](https://github.com/soramitsu/scale-codec-cpp) will be used for SCALE encoding/decoding. 
 
