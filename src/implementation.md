@@ -57,7 +57,7 @@ All platform-specific code will be abstracted out. That would allow us to compil
 We will use [binaryen](https://github.com/WebAssembly/binaryen) with Emscripten to create the WASM module. Binaryen is a compiler and toolchain infrastructure library for WebAssembly written in C++. Reasons behind this choice:
 - binaryen if fast and effective, it is optimized to use all available CPU cores, it also compiles to WebAssembly quickly,
 - it contains many optimizations that improve code size and speed,
-- binaryen is already used by other projects (e.g. Kagome) so it is a tested solution.
+- binaryen is already used by other Polkadot related projects (e.g. Kagome) so it is a tested solution.
 
 [scale-code-cpp](https://github.com/soramitsu/scale-codec-cpp) will be used for SCALE encoding/decoding. 
 
