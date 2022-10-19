@@ -78,7 +78,8 @@ To support the light client functionality we will implement the support of the f
 
 We will use a hash map to store the blockchain state.  This is an in-memory serialization/deserialization data structure, functioning as a de facto database.
 
-As local storage in a browser is severely limited (5-10 MB), we cannot have persistence of a database. Smoldot uses the same method.
+As local storage in a browser is severely limited (5-10 MB), we cannot have persistence of a database. Smoldot uses the same method.  Although we not aware of any issues that smoldot has with non-persistence, this aspect will be thoroughly tested.
+
 ## Crypto Libraries
 
 We will use openssl for cryptography functions (e.g. Blake2), and port the needed algorithms not included in openssl (e.g. Schnorr signatures).
