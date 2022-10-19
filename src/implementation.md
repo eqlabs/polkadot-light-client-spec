@@ -74,11 +74,11 @@ To support the light client functionality we will implement the support of the f
 - /dot/sync/1
 - /dot/light/2
 
-## Database
+## Storage
 
-We will use a hash map to store the blockchain state.  This is an in-memory serialization/deserialization data structure, functioning as a de facto database.
+We will use a hash map to store the blockchain state.  This is an in-memory serialization/deserialization data structure, consisting of the current peers and block header information for some number of blocks (i.e., a history). This object functions as a *de facto* database.
 
-As local storage in a browser is severely limited (5-10 MB), we cannot have persistence of a database. Smoldot uses the same method.  Although we are not aware of any issues that smoldot has with non-persistence, this aspect will be thoroughly tested.
+As local storage in a browser is severely limited (5-10 MB), we cannot have persistence of a database. [Smoldot](https://github.com/paritytech/smoldot) uses the same method.  Although we are not aware of any issues that smoldot has with non-persistence, this aspect will be thoroughly tested.
 
 ## Crypto Libraries
 
