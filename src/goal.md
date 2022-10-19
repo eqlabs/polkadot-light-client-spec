@@ -15,6 +15,6 @@ Reasons for writing it in C++:
 - Add more integration options for mobile and desktop platforms. C++ light client library can be reused for creating mobile and desktop wallets. C++ code of the library will be also compiled to WASM module allowing launching light client in a browser
 
 Downsides of choosing C++ for implementation:
-- C++ language is infamous for been keen to undefined behavior and resource management runtime errors which are sometimes hard to find. This can be handled by using modern C++ features (smart pointers, move resource management), adding static and dynamic code analysis jobs
-- C++ standard library lacks many things which are quite standard for other languages, e.g. networking, serialization. So the implementation in C++ may have more thirdparty components
-- Modern C++ (up to 20 standard) is quite complex. So the requirements to the potential contributors are quite high
+- The C++ language is infamous for being prone to undefined behavior and resource management runtime errors which are sometimes hard to find. This can be prevented (or at least mitigated) by the use of modern C++ features, including smart pointers, move resource management, as well as the addition of static and dynamic code analysis jobs
+- The C++ standard library lacks many features which are standard in other languages, most importantly networking and serialization. The implementation in C++ may therefore have more third-party components
+- Modern C++ (up to 20 standard) is quite complex. The required skill for potential contributors can be correspondingly high
