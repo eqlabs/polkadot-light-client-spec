@@ -95,7 +95,7 @@ Request/Responses use these protocols:
 
 The `/dot/state/2` protocol is only supported by full nodes
 
-More research is required to determine exactly what ...
+More research and development is required build a more detailed picture of interactions.
 
 ## Protocol Support
 
