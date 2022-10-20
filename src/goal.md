@@ -18,3 +18,26 @@ Downsides of choosing C++ for implementation:
 - The C++ language is infamous for being prone to undefined behavior and resource management runtime errors which are sometimes hard to find. This can be prevented (or at least mitigated) by the use of modern C++ features, including smart pointers, move resource management, as well as the addition of static and dynamic code analysis jobs
 - The C++ standard library lacks many features which are standard in other languages, most importantly networking and serialization. The implementation in C++ may therefore have more third-party components
 - Modern C++ (up to 20 standard) is quite complex. The required skill for potential contributors can be correspondingly high
+
+Fuctional comparison: Light Client vs. Full Node
+> Full Node
+> - full verification of all blocks of the chain
+> - holds all of the previous block data and the chain's storage in database
+> - installation, maintenance, and execution tend to be exhaustive and require system administration expertise.
+>
+> Light Client
+> - only verifies the authenticity of blocks of the chain
+> - no database
+> - no installation; has an optional extension with minimal or no maintenance. Initializes quickly
+>
+> [https://wiki.polkadot.network/docs](https://wiki.polkadot.network/docs/build-substrate)
+
+Addtionally,
+- the light client only stores parts of the blockchain that are relevant to the transaction being performed
+- they remain trustless, directly syncing block headers from peer nodes in order to verify the specific responses provided by the full node
+
+Light client use cases
+- Attach to a full node
+- get balance
+- perform a transaction
+- verify block headers
