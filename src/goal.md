@@ -34,7 +34,8 @@ Fuctional comparison: Light Client vs. Full Node
 
 Addtionally,
 - the light client only stores parts of the blockchain that are relevant to the transaction being performed
-- they remain trustless, directly syncing block headers from peer nodes in order to verify the specific responses provided by the full node
+-  may cache some limited data in local storage, in order to speed up client launch (e.g., current runtime, previously connected peers, etc.)
+- clients remain trustless, directly syncing block headers from peer nodes in order to verify the specific responses provided by the full node
 
 Light client use cases
 - Attach to a full node
