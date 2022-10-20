@@ -90,7 +90,7 @@ The following methods will be implemented: `rpc_methods`, `chainHead_unstable_fo
 - `chainHead_unstable_unpin` method which should be called whenever a `{"event": "finalized"}` notification is received by a subscriber
 - `chainHead_unstable_unfollow` - stops a subscription started with `chainHead_unstable_follow`
 
-The other chosen methods will allow client to get more informations about blocks in the chain.
+The remaining methods will allow the client to get more information about blocks in the chain.
 
 ## Storage
 
