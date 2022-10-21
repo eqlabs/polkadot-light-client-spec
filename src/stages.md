@@ -17,5 +17,5 @@ The implementation sequence is going to be the following:
     3. Implement JS wrapper around WASM module
 4. Add support of other JSON RPC methods and parachains
     1. Implement `rpc_methods`, `chainHead_unstable_storage`, `chainHead_unstable_call` and `chainHead_unstable_stopCall` JSON RPC methods
-    2. Test Polkadot, Westend and Kusama compatibility
+    2. Test compatibility with Polkadot, Westend and Kusama
     3. Add support of parachains
