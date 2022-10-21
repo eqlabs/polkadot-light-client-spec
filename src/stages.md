@@ -1,6 +1,6 @@
 # Implementation stages
 
-These are the defined milestones, in order of implmentation:
+These are the defined milestones, in order of implementation:
 
 1. Native light client console application with minimal JSON RPC functionality
     1. Add support of Conan package manager to [scale-code-cpp](https://github.com/soramitsu/scale-codec-cpp)
