@@ -105,6 +105,7 @@ To support the light client functionality we will implement the support of the f
 - /dot/light/2
 - /dot/kad
 - /paritytech/grandpa/1
+- /dot/transactions/1
 
 
 ## JSON-RPC methods
