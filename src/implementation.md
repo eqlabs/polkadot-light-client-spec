@@ -85,7 +85,7 @@ Notifications make use of the following protocols:
 - /dot/transactions/1
 - /paritytech/grandpa/1
 
-Block announces are intentionally sent only to light clients, and not to full nodes. Block announces coming from light clients are useless to full nodes, as they can't download the block body (which they need) from that light client.
+Block announces are intentionally sent only to light clients, and not to full nodes.
 
 Request/Responses use these protocols:
 - /dot/sync/2
@@ -95,7 +95,7 @@ Request/Responses use these protocols:
 
 The `/dot/state/2` protocol is only supported by full nodes
 
-More research and development is required build a more detailed picture of interactions.
+More research and development is required in order to build a more detailed picture of interactions.
 
 ## Protocol Support
 
@@ -105,6 +105,9 @@ To support the light client functionality we will implement the support of the f
 - /dot/block-announces/1
 - /dot/sync/1
 - /dot/light/2
+- /dot/kad
+- /paritytech/grandpa/1
+
 
 ## JSON-RPC methods
 
