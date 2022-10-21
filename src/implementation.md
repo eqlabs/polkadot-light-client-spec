@@ -74,6 +74,29 @@ We will use [binaryen](https://github.com/WebAssembly/binaryen) to run WebAssemb
 
 - [cpp-libp2p](https://github.com/libp2p/cpp-libp2p) will be used as libp2p implementation. We will extend these libraries to support building with the Conan package manager. Also we will add support of building with Emscripten and websocket clients.
 
+## Light Client Component Interactions
+
+The client will perform light-weight interactions with components (e.g., GRANDPA) by way of two groups of messaging:
+- notification messages
+- request/response messages
+
+Notifications make use of the following protocols:
+- /dot/block-announces/1
+- /dot/transactions/1
+- /paritytech/grandpa/1
+
+Block announces are intentionally sent only to light clients, and not to full nodes.
+
+Request/Responses use these protocols:
+- /dot/sync/2
+- /dot/light/2
+- /dot/kad
+- /dot/sync/warp
+
+The `/dot/state/2` protocol is only supported by full nodes
+
+More research and development is required in order to build a more detailed picture of interactions.
+
 ## Protocol Support
 
 To support the light client functionality we will implement the support of the following protocols:
@@ -82,6 +105,9 @@ To support the light client functionality we will implement the support of the f
 - /dot/block-announces/1
 - /dot/sync/1
 - /dot/light/2
+- /dot/kad
+- /paritytech/grandpa/1
+
 
 ## JSON-RPC methods
 
