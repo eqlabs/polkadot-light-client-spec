@@ -85,8 +85,6 @@ Notifications make use of the following protocols:
 - /dot/transactions/1
 - /paritytech/grandpa/1
 
-Block announces are intentionally sent only to light clients, and not to full nodes.
-
 Request/Responses use these protocols:
 - /dot/sync/2
 - /dot/light/2
