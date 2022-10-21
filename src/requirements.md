@@ -33,9 +33,10 @@ Note: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “
 
 - The client MUST be able to connect to a relay chain using chain state.
 - The client MUST be able to retrieve checkpoint state from a trusted source to speed up initialization.
-- The client MUST be able to subscribe/unsubscribe to/from parachains.
+- The client MUST be able to subscribe/unsubscribe to/from any polkadot-spec-conformant relay chain (Polkadot, Westend, Kusama)
+- The client MUST be able to subscribe/unsubscribe to/from parachains that do not use custom protocols or cryptography methods other than those that Polkadot, Westend and Kusama use.
 - The client MUST be able to send a new transaction.
-- The client MUST be able subscribe a new transaction's updates.
+- The client MUST be able subscribe to updates from a new transaction
 - The client MUST support the following minimum subset of [RPC methods](https://paritytech.github.io/json-rpc-interface-spec/):
   - `rpc_methods`, `chainHead_unstable_follow`, `chainHead_unstable_unfollow`, `chainHead_unstable_unpin`, `chainHead_unstable_storage`, `chainHead_unstable_call` and `chainHead_unstable_stopCall`.
 
