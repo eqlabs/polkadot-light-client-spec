@@ -1,6 +1,6 @@
 # Implementation stages
 
-The implementation sequence is going to be the following:
+These are the defined milestones, in order of implmentation:
 
 1. Native light client console application with minimal JSON RPC functionality
     1. Add support of Conan package manager to [scale-code-cpp](https://github.com/soramitsu/scale-codec-cpp)
@@ -15,4 +15,4 @@ The implementation sequence is going to be the following:
     1. Compile  [cpp-libp2p](https://github.com/libp2p/cpp-libp2p) with Emscipten and add websocket client support
     2. Add WASM compilation target for C++ client library
     3. Implement JS wrapper around WASM module
-4. Implement more JSON RPC methods
+4. Implement additional JSON RPC methods

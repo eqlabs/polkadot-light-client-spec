@@ -31,8 +31,8 @@ Note: The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “
 
 ## Functionality
 
-- The client MUST be able to connecting to a relay chain using chain state.
-- The client MUST be able to retrieving checkpoint state from a trusted source to speed up initialization.
+- The client MUST be able to connect to a relay chain using chain state.
+- The client MUST be able to retrieve checkpoint state from a trusted source to speed up initialization.
 - The client MUST be able to subscribe/unsubscribe to/from parachains.
 - The client MUST be able to send a new transaction.
 - The client MUST be able subscribe a new transaction's updates.
