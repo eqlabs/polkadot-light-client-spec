@@ -121,7 +121,23 @@ The following methods will be implemented:
 
 ## JSON-RPC methods
 
-The following methods will be implemented: `rpc_methods`, `chainHead_unstable_follow`, `chainHead_unstable_unfollow`, `chainHead_unstable_unpin`, `chainHead_unstable_storage`, `chainHead_unstable_call` and `chainHead_unstable_stopCall`. All of `chainHead` methods allow tracking of the chain and their storage. The most important ones that will be implemented at the first stage are:
+The following methods will be implemented:
+- `rpc_methods`
+- `chainHead_unstable_follow`
+- `chainHead_unstable_unfollow`
+- `chainHead_unstable_unpin`
+- `chainHead_unstable_storage`
+- `chainHead_unstable_call`
+- `chainHead_unstable_stopCall`
+- `chainHead_unstable_body`
+- `chainHead_unstable_genesisHash`
+- `chainHead_unstable_header`
+- `chainHead_unstable_stopBody`
+- `chainHead_unstable_stopStorage`
+- `transaction_unstable_submitAndWatch`
+- `transaction_unstable_unwatch`
+
+All of `chainHead` methods allow tracking of the chain and their storage. The most important ones that will be implemented at the first stage are:
 - `chainHead_unstable_follow` : the first method that should be called by the client. It returns the current list of blocks that are near the head of the chain and generates notifications about new blocks.
 - `chainHead_unstable_unpin` : should be called whenever a `{"event": "finalized"}` notification is received by a subscriber
 - `chainHead_unstable_unfollow` : stops a subscription started with `chainHead_unstable_follow`
