@@ -107,6 +107,17 @@ To support the light client functionality we will implement the support of the f
 - /paritytech/grandpa/1
 - /dot/transactions/1
 
+## @substrate/connect Extension Protocol
+
+The following methods will be implemented:
+- ToApplicationError
+- ToApplicationChainReady
+- ToApplicationRpc
+- ToExtensionAddChain
+- ToExtensionAddWellKnownChain
+- ToExtensionRpc
+- ToExtensionRemoveChain
+
 
 ## JSON-RPC methods
 
