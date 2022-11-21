@@ -132,13 +132,12 @@ The following methods will be implemented:
 - `transaction_unstable_submitAndWatch`
 - `transaction_unstable_unwatch`
 
-The `chainHead` methods allow tracking of the chain and their storage. The most important ones that will be implemented at the first stage are:
+The `chainHead_` methods allow tracking of the chain and their storage. The most important ones that will be implemented at the first stage are:
 - `chainHead_unstable_follow` : the first method that should be called by the client. It returns the current list of blocks that are near the head of the chain and generates notifications about new blocks.
 - `chainHead_unstable_unpin` : should be called whenever a `{"event": "finalized"}` notification is received by a subscriber
 - `chainHead_unstable_unfollow` : stops a subscription started with `chainHead_unstable_follow`
 
-The `transaction` methods enable transaction execution and tracking.
-
+The two `transaction_` methods enable the submission and tracking of transactions via `transaction_unstable_watchEvent`'s.
 ## Storage
 
 We will use a hash map to store the blockchain state.  This is an in-memory serialization/deserialization data structure, consisting of the current peers and block header information for some number of blocks (i.e., a history). This object functions as a *de facto* database.
